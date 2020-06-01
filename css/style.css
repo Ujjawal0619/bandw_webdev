@@ -1,0 +1,583 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+p {
+    font-size: .9rem;
+    line-height: 1.6;
+    color: #606060;
+    font-weight: 400;
+}
+.cards h2,
+.services-div h2{
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 20px 0 15px 0;
+    word-spacing: 4px;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.493), rgba(255, 0, 85, 0.397)), url('../img/header.jpg');
+    /* syntax for pink overlay, here ^- top color and             ^-bottom color alpha channel is req for transparency */
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+                    /* r,t     to     l,t cordinates in clock wise direction */
+    position: relative; /* for next element */
+    overflow: hidden;/* no more scroll bars, fixed-top BootStrap 4 class */
+}
+
+/*  try it for darken the overlay from right side
+ .header:before {
+    content: "";
+    position: absolute;/* over on header* <--NOTICE backslash
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #1e5700 0%, #3ccdbb 0%, #16c9f6 100%);
+    opacity: .2;
+    z-index: -1;
+} */
+
+.navbar:before {
+    content: "";
+    position: absolute;/* over on header*/
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #3d3d3d 0%, #ea00ff 0%, #ff006a 100%);
+    opacity: .2;
+    z-index: -1;
+}
+
+.nav-item a{
+    color: #fff;
+    font-weight: bold;
+}
+
+/* header section */
+.header-section {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    height: inherit;
+}
+
+.center-div {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+}
+
+.center-div p {
+    padding: 10px 0 20px 0;
+}
+
+.header-buttons a{
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    font-size: 1 rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    transition: .3s; /* effect on hover*/
+    display: inline-block;/* necessary for transform in hover*/
+}
+
+.header-buttons a:hover {
+    color: #606060;
+    background: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(255, 0, 119, 0.5);
+    transform: scale(1.05);
+}
+
+.cards-container {
+    width: 100%;
+    height: auto;
+}
+
+.cards {
+    display: inline-block;
+    background: #fff;
+    border: medium none;
+    margin: 5px auto;
+    padding: 30px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.cards:hover {
+    box-shadow: 0 0 20px 0 rgba(58, 58, 58, 0.5);
+    transform: translateY(-20px);
+}
+
+/*SERVICES SECTION*/
+
+.services-offer {
+    background: #f7f7f9;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.heading h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.progress-bar-rapper {
+    color: #2e2e2e;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.progress {
+    height: 0.8rem!important;
+    margin-top: 10px!important;
+}
+
+.service-icons {
+    display: flex;
+    /* justify-content: center; not working*/
+    align-items: center;
+}
+
+.service-icons i {
+    color: #2fddc2;
+}
+
+/* services done */
+
+/* PROJECT-WORKS */
+.project-work {
+    margin: 100px 0;
+}
+
+.project-work h1 {
+    font-size: 2rem;
+}
+
+/* PRICING SECTION */
+.pricing {
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+}
+
+.pricing:before {
+    content: "";
+    position: absolute;/* over on header*/
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(160deg, #ff008c 55%, #fff 0%);
+    z-index: -1;
+}
+
+.pricing .heading {
+    margin-bottom: 3rem;
+}
+.money {
+    font-size: 40px;
+    line-height: 1;
+    color: #606060;
+    transition: 0.4s ease-in-out;
+}
+
+.card {
+    transition: 0.4s ease-in-out;
+}
+
+.card-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: #fff;
+    padding: 25px 9!important;
+}
+
+.card-body {
+    padding: 30px 0px;
+
+}
+
+.card-body li {
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #606060;
+}
+
+.card-footer {
+    background: #fff;
+    padding: 30px 0px;
+}
+
+.card-footer a {
+    background: rgb(255, 0, 175);
+    color: #fff;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    font-size: 1 rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    transition: .3s; /* effect on hover*/
+    display: inline-block;/* necessary for transform in hover*/
+}
+
+.card-footer a:hover {
+    color: rgb(255, 0, 175);
+    background: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(255, 0, 119, 0.5);
+    transform: scale(1.05);
+}
+
+.card-second { /*div containing this second card, since we can see the hover effect on second 'card' */
+    transform: translateY(-20px);
+}
+
+.card:hover {
+    color: rgba(255, 0, 119, 0.5);
+    transform: translateY(-20px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .money {
+    color: rgba(255, 0, 119, 0.5);
+}
+
+/* TESTIMONIALS */
+
+.happyclients {
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
+}
+
+.box {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.box:hover {
+    background: rgb(255, 0, 119);
+}
+
+.box:hover p {
+   color: #fff;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -60px;
+}
+
+.carousel-indicators li {
+    background-color: rgb(255, 0, 119);
+}
+
+.box a {
+    position: relative;
+}
+
+.box a img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px; 
+}
+.box a:after {
+    content: "\f10d";
+    font-family: FontAwesome;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 27, 119);
+    color: white;
+    position: absolute;
+    top: 120%;
+    left: 70%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.box h2 {
+    font-size: 13px;
+    font-weight: 400px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* CONTACT US */
+
+.contactus {
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+    position: relative;
+}
+
+.contactus:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(330deg, #ff008c 55%, #fff 0%);
+    z-index: -1;
+}
+
+::placeholder {
+    font-size: 0.85rem;
+}
+
+.form-button button {
+    /* visibility: hidden; */
+    border: none;
+    background: transparent;
+    color: #ff008c;
+    border-radius: 100px;
+    margin: 0 5px;
+    padding: 12px 35px;
+    outline: none;
+    font-weight: 400;
+    text-align: center;
+    transition: .3s; /* effect on hover*/
+}
+
+form:hover .form-button button{
+    background: #fff;
+}
+
+.form-button button:hover {
+    border: none;
+    background: #fff;
+    box-shadow: 0 0 20px 0 #fff;
+    color: #ff008c;
+}
+
+.btn-contact:active, input[type=submit] {/*other way of selection*/
+    color: #ff008c!important;
+    background: #fff!important;
+    box-shadow: 0 0 20px 0 #fff!important;
+    outline: none;
+    box-shadow: 0 0 20px 0 #ce0056;
+    transform: scale(1.1);
+}
+/* CONTACT US END */
+
+/* NEWS LETTER */
+.newsletter {
+    width: 100%;
+    height: auto;
+    margin: 80px auto;
+}
+
+.newsletter-input{
+    border-radius: 100px 0px 0px 100px; /*left rounded*/
+    min-width: 150px;
+    min-height: 45px;
+}
+
+.input-group-text{
+    color: #fff;
+    background: #ff008c;
+    border-radius: 0px 100px 100px 0px;
+    min-width: 120px;
+    min-height: 45px;
+}
+/* NEWS LETTER END */
+
+/* FOOTER */
+.footersection{
+    width: 100%;
+    height: auto;
+    padding: 70px 0 0 0;
+    background: #ff008c;
+    position: relative;
+}
+
+.footersection h3{
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footersection p{
+    color: #fff;
+}
+
+.footersection li a{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#myBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: #fff;
+    background: #ff008c;
+    text-shadow: 0 2px 5px rgba(58, 58, 58, 0.5);
+    transition: .3s;
+}
+
+.socialmedia a{
+    display: absolute;
+    color: #fff;
+    margin: 10px;
+    display: inline-block;/* necessary for transform in hover*/
+    transition: .2s;
+}
+
+.socialmedia a:hover{
+    color: #fff;
+    transform: translateY(-3px);
+    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#myBtn:hover{
+    color: #ff008c;
+    background: #fff;
+}
+.copyrightfooter p{
+    margin: 0;
+    padding: 20px 0 20px 0;
+}
+.copyrightfooter{
+    background: #ff006c;
+}
+
+/* FOOTER END */
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 768px){
+    .nav-item{
+        text-align: center;
+    }
+    .pricing, .happyclients{
+        height: auto;/* solve overlapping problem due to overflow of containner height = vh*/
+        margin: 50px, 0px;
+    }
+    .card-second{
+        transform: translateY(0px);
+        margin: 30px 0px;
+    }
+
+    .services-div{
+        margin: 50px 0 37px 9%;
+    }
+
+    .services-div .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-icons{
+        /* to set in middle*/
+        display: inline-block;
+        margin: auto;
+        margin-top: 35px;
+    }
+
+    .for-responsive{
+        text-align: center;
+        margin-left: 10%;
+    }
+
+    .footersection{
+        text-align: center;
+    }
+    .footer-div{
+        margin-top: 40px;
+    }
+}
+@media(max-width: 991px){
+    .pricing, .happyclients{
+        height: auto;/* solve overlapping problem due to overflow of containner height = vh*/
+        margin: 50px, 0px;
+    }
+
+    .card-second{
+        transform: translateY(0px);
+        margin: 30px 0px;
+    }
+    .footernavlinks{
+        margin-left: 7.5rem;
+    }
+
+    .footer-div{
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .footernewsletter{
+        flex: 2;
+    }
+
+    .socialmedia{
+        flex: 1;
+    }
+}
