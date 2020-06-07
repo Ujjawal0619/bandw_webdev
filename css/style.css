@@ -91,7 +91,7 @@ p {
     width: 100%;
     height: auto;
     position: absolute;
-    top: 50%;
+    top: 35%;
     bottom: 50%;
 }
 
@@ -550,10 +550,12 @@ form:hover .form-button button{
     .footersection{
         text-align: center;
     }
+
     .footer-div{
         margin-top: 40px;
     }
 }
+
 @media(max-width: 991px){
     .pricing, .happyclients{
         height: auto;/* solve overlapping problem due to overflow of containner height = vh*/
@@ -565,11 +567,12 @@ form:hover .form-button button{
         margin: 30px 0px;
     }
     .footernavlinks{
-        margin-left: 7.5rem;
+        margin: auto;
     }
 
     .footer-div{
         display: flex;
+        flex-direction: column;
         margin-top: 30px;
     }
 
@@ -579,5 +582,6 @@ form:hover .form-button button{
 
     .socialmedia{
         flex: 1;
+        margin: auto;
     }
 }
